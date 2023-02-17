@@ -1,0 +1,16 @@
+version: '3.1'
+services:
+  db:
+    image: postgres
+    restart: always
+    hostname: db
+    environment:
+      POSTGRES_DB: usuarios_db
+      POSTGRES_USER: isael
+      POSTGRES_PASSWORD: ID_admin_00
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
